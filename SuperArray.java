@@ -10,10 +10,14 @@ public class SuperArray{
     return size;
   }
   public boolean add(String element){
-      for (int i = 0; i<element.length(); i++){
-        data[size]=element;
-        size++;
-      }
+      data[size]=element;
+      size++;
       return true;
     }
+  public String get(int index){
+    if (data[index]!= null){
+      return data[index];
+    }
+    else {return "none";}
+  }
 }
