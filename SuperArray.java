@@ -61,5 +61,13 @@ public class SuperArray{
     }
     return Arrays.toString(temp);
     }
-  
+    public boolean contains(String s){
+      boolean ans = false;
+      for (int i = 0; i < data.length; i++){
+        if (data[i]!= null && data[i].equals(s)){
+          ans = true;
+        }
+      }
+      return ans;
+    }
 }
