@@ -20,4 +20,19 @@ public class SuperArray{
     }
     else {return "none";}
   }
+  public String set(int index, String element){
+    if (data[index]!= null){
+      String ans = data[index];
+      data[index]=element;
+      return ans;
+    }
+    return "NO ELEMENT TO REPLACE";
+  }
+  private void resize(){
+    String [] temp = new String [size + 10];
+    for (int i = 0; i<data.length; i++){
+      temp[i]=data[i];
+    }
+    
+  }
 }
