@@ -10,6 +10,9 @@ public class SuperArray{
     return size;
   }
   public boolean add(String element){
+      if (size == data.length){
+        resize();
+      }
       data[size]=element;
       size++;
       return true;
@@ -33,6 +36,6 @@ public class SuperArray{
     for (int i = 0; i<data.length; i++){
       temp[i]=data[i];
     }
-    
+    data = temp;
   }
 }
