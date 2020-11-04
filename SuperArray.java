@@ -8,5 +8,12 @@ public class SuperArray{
   }
   public int size(){
     return size;
-}
+  }
+  public boolean add(String element){
+      for (int i = 0; i<element.length(); i++){
+        data[size]=element;
+        size++;
+      }
+      return true;
+    }
 }
