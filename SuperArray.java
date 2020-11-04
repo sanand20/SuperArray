@@ -1,3 +1,4 @@
+import java.util.*;
 public class SuperArray{
   private String [] data;
   private int size;
@@ -38,4 +39,35 @@ public class SuperArray{
     }
     data = temp;
   }
+  public boolean isEmpty(){
+    if (size ==0){
+      return true;
+    }
+    else {return false;}
+  }
+  public void clear(){
+    size = 0;
+    String [] temp = new String [10];
+    data = temp;
+    }
+  public String toString() {
+    String [] temp = new String [size];
+    int j = 0;
+    for (int i = 0; i<data.length; i++){
+      if (data[i]!=null){
+        temp[j]=data[i];
+        j++;
+      }
+    }
+    return Arrays.toString(temp);
+    }
+    public boolean contains(String s){
+      boolean ans = false;
+      for (int i = 0; i < data.length; i++){
+        if (data[i]!= null && data[i].equals(s)){
+          ans = true;
+        }
+      }
+      return ans;
+    }
 }
