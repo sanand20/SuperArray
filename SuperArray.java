@@ -108,4 +108,13 @@ public class SuperArray{
         size --;
         return ans;
      }
+      public int indexOf(String s){
+        int ans = -1;
+        for (int i = 0; i < data.length; i++){
+          if (data[i]!= null && data[i].equals(s)){
+            ans = i;
+          }
+        }
+        return ans;
+      }
 }
