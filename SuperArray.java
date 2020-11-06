@@ -117,4 +117,16 @@ public class SuperArray{
         }
         return ans;
       }
+
+      public String[] toArray(){
+        String [] temp = new String [size];
+        int j = 0;
+        for (int i = 0; i<data.length; i++){
+          if (data[i]!=null){
+            temp[j]=data[i];
+            j++;
+          }
+        }
+        return temp;
+      }
 }
