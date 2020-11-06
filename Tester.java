@@ -8,6 +8,11 @@ public class Tester{
     System.out.println(words.contains("kan"));
     System.out.println(words.contains("kani"));
     System.out.println(words.contains("gani"));
+    words.add(0, "hello");
+    System.out.println(words.toArray());
+    System.out.println(words.indexOf("hello"));
+      System.out.println(words.remove(1));
+    System.out.println(words.toString());
     /*for(int i = 0; i < words.size(); i++){
       System.out.println( words.get(i) );
     }
