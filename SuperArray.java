@@ -33,7 +33,7 @@ public class SuperArray{
     return "NO ELEMENT TO REPLACE";
   }
   private void resize(){
-    String [] temp = new String [size + 10];
+    String [] temp = new String [size * 2 + 1];
     for (int i = 0; i<data.length; i++){
       temp[i]=data[i];
     }
@@ -70,4 +70,10 @@ public class SuperArray{
       }
       return ans;
     }
+    public SuperArray(int initialCapacity){
+      String [] temp = new String [initialCapacity];
+      data = temp;
+      size = 0;
+    }
+  
 }
