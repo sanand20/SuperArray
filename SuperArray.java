@@ -91,4 +91,21 @@ public class SuperArray{
        data = temp;
        size ++;
      }
+     public String remove(int index){
+       String [] temp = new String [data.length - 1];
+       for (int i = 0; i<index; i++){
+         if (data[i]!= null){
+           temp[i]= data[i];
+         }
+       }
+       for (int i = index+1; i<data.length; i++){
+         if (data[i]!= null){
+           temp[i-1]= data[i];
+         }
+        }
+        String ans = data[index];
+        data = temp;
+        size --;
+        return ans;
+     }
 }
