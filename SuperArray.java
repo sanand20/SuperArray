@@ -109,13 +109,12 @@ public class SuperArray{
         return ans;
      }
       public int indexOf(String s){
-        int ans = -1;
         for (int i = 0; i < data.length; i++){
           if (data[i]!= null && data[i].equals(s)){
-            ans = i;
+            return i;
           }
         }
-        return ans;
+        return -1;
       }
 
       public String[] toArray(){
@@ -129,4 +128,22 @@ public class SuperArray{
         }
         return temp;
       }
+       public int lastIndexOf(String value){
+         int ans = -1;
+         for (int i = 0; i < data.length; i++){
+           if (data[i]!= null && data[i].equals(value)){
+             ans = i;
+           }
+         }
+         return ans;
+       }
+       public boolean equals(SuperArray other){
+       for (int i = 0; i<size(); i++){
+         if (get(i) != other.get(i)){
+           return false;
+         }
+       }
+       return true && (size()==other.size());
+     }
+     
 }
