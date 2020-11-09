@@ -11,29 +11,29 @@ public class Demo{
   }
   }
   public static SuperArray findOverlap(SuperArray a, SuperArray b){
-    int j = 0;
-    SuperArray temp = new SuperArray();
     for (int i = 0; i<a.size(); i++){
       String x = a.get(i);
-      if (b.contains(a)){
-        temp[j]=a[i];
-        j++;
+      if (b.contains(x)==false){
+          a.remove(i);
+          i--;
+        }
       }
+    return (a);
   }
+
   public static void main(String[]args){
     SuperArray words = new SuperArray();
     //grouped to save vertical space
-    words.add("kani");   words.add("uni");     words.add("ebi");     words.add("una");
+    words.add("ka");   words.add("uni");     words.add("ebi");     words.add("una");
     words.add("una");    words.add("ebi");     words.add("kani");    words.add("una");
     words.add("una");    words.add("ebi");     words.add("toro");
 
     SuperArray word = new SuperArray();
     //grouped to save vertical space
-    words.add("kani");   words.add("uni");     words.add("ebi");     words.add("una");
-    words.add("una");    words.add("ebi");     words.add("kani");    words.add("una");
-    words.add("una");    words.add("ebi");     words.add("toro");
+    word.add("i");   word.add("uni");     word.add("ebi");     word.add("una");
+    word.add("una");    word.add("ebi");     word.add("kani");    word.add("una");
+    word.add("una");    word.add("ebi");     word.add("toro");
 
-    System.out.println(words);
-    findOverlap(words, word);
-    System.out.println(temp);  }
+
+    System.out.println(findOverlap(words, word));  }
 }
