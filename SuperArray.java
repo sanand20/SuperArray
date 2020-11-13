@@ -84,7 +84,10 @@ public class SuperArray{
       size = 0;
     }
     public void add(int index, String element){
-       String [] temp = new String [data.length + 1];
+      if (index < 0 || index > size) {
+      throw new IndexOutOfBoundsException ("Index" + index + "is out of bounds");
+    }
+     String [] temp = new String [data.length + 1];
        for (int i = 0; i<index; i++){
          if (data[i]!= null){
            temp[i]= data[i];
