@@ -3,6 +3,7 @@ public class SuperArray{
   private String [] data;
   private int size;
 
+
   public SuperArray() {
     data = new String [10];
     size = 0;
@@ -71,6 +72,9 @@ public class SuperArray{
       return ans;
     }
     public SuperArray(int initialCapacity){
+      if (initialCapacity < 0) {
+        throw new IllegalArgumentException ();
+      }
       String [] temp = new String [initialCapacity];
       data = temp;
       size = 0;
@@ -92,6 +96,12 @@ public class SuperArray{
        size ++;
      }
      public String remove(int index){
+       if (index < 0 || index >= size) {
+       throw new IndexOutOfBoundsException ();
+     }
+     if (data[index] == null) {
+       return null;
+     }
        String [] temp = new String [data.length - 1];
        for (int i = 0; i<index; i++){
          if (data[i]!= null){
@@ -145,5 +155,5 @@ public class SuperArray{
        }
        return true && (size()==other.size());
      }
-     
+
 }
