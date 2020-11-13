@@ -27,6 +27,9 @@ public class SuperArray{
 
   }
   public String set(int index, String element){
+    if (index < 0 || index >= size) {
+      throw new IndexOutOfBoundsException ("Index"+ index +"is out of bounds");
+    }
     if (data[index]!= null){
       String ans = data[index];
       data[index]=element;
@@ -74,7 +77,7 @@ public class SuperArray{
     }
     public SuperArray(int initialCapacity){
       if (initialCapacity < 0) {
-        throw new IllegalArgumentException ();
+        throw new IllegalArgumentException ("Initial Capacity" + initialCapacity + "is less than 0");
       }
       String [] temp = new String [initialCapacity];
       data = temp;
