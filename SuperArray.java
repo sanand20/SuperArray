@@ -20,10 +20,11 @@ public class SuperArray{
       return true;
     }
   public String get(int index){
-    if (data[index]!= null){
-      return data[index];
+    if (index < 0 || index >= size) {
+      throw new IndexOutOfBoundsException ("Index"+ index +"is out of bounds");
     }
-    else {return "none";}
+    return data[index];
+
   }
   public String set(int index, String element){
     if (data[index]!= null){
